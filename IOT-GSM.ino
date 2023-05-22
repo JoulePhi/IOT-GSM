@@ -3,10 +3,10 @@
 #define SIM800_RX_PIN 9
 #define SIM800_TX_PIN 10
 #define SIM800_RST_PIN 8
-#define POST 1
-#define GET 0
 SIM800L* sim800l;
-const char* APN = "internet";
+const char APN[] = "internet";
+const char URL[] = "https://v1.nocodeapi.com/datadeni/google_sheets/xzDjIQomcfxkFnkz?tabId=Sheet1";
+const char CONTENT_TYPE[] = "application/json";
 void setup() {
   Serial.begin(9600);
   while(!Serial);
@@ -17,5 +17,4 @@ void setup() {
   setupModule();
 }
 void loop() {
-  http(POST,"");
 }
